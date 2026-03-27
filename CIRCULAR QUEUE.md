@@ -1,64 +1,3 @@
-Skip to content
-Jothivanan07
-Module-14
-Repository navigation
-Code
-Pull requests
-Actions
-Projects
-Security
-Insights
-You’re making changes in a project you don’t have write access to. Submitting a change will write it to a new branch in your fork Harishsaraswathi/Module-14, so you can send a pull request.
-Module-14
-/
-CIRCULAR QUEUE.md
-in
-main
-
-Edit
-
-Preview
-Indent mode
-
-Spaces
-Indent size
-
-2
-Line wrap mode
-
-Soft wrap
-Editing CIRCULAR QUEUE.md file contents
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
 # Exp No: 14b  
 ## Circular Queue 
 ---
@@ -90,6 +29,40 @@ class Queue:
     def __init__(self, size):
         self.items = [0] * size
         self.max_size = size
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
-No file chosen
-Attach files by dragging & dropping, selecting or pasting them.
+        self.head, self.tail, self.size = 0, 0, 0
+    def enqueue(self, item):
+        if self.is_list_full():
+            print("Queue is full")
+            return
+        self.items[self.tail]=item
+        self.tail=(self.tail+1)%self.max_size
+        self.size+=1
+    def dequeue(self):
+        item=self.items[self.head]
+        self.head=(self.head+1)%self.max_size
+        self.item-=1
+        return item
+    def is_list_full(self):
+        if self.size==self.max_size:
+            return True
+        return False
+    def is_empty(self):
+        if self.size==0:
+            return True
+        return False
+size=int(input())
+q=Queue(size)
+str=float(input())
+str1=float(input())
+str2=float(input())
+q.enqueue(str)
+q.enqueue(str1)
+q.enqueue(str2)
+print(q.items)
+```
+
+### OUTPUT
+<img width="1185" height="379" alt="image" src="https://github.com/user-attachments/assets/04681e57-4916-48e0-8fe3-71b0e8efd1ec" />
+
+### RESULT
+Therefore, the output is the example to write a Python program with a function to insert float values into a Circular Queue.
